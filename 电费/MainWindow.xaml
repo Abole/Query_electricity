@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:电费"
         mc:Ignorable="d"
-        Title="F区电费查询" Height="600" Width="800"
+        Title="F区寝室电费查询系统" Height="360" Width="500"
+        ResizeMode="CanMinimize"
+        Loaded="Window_Loaded"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -13,19 +15,74 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}">
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Icon="D:\code\C#\电费\电费\省电.ico">
     <Border Padding="10">
-    <StackPanel>
-        <Grid >
+        <StackPanel>
 
-                <materialDesign:Snackbar
-                 x:Name="SnackbarTwo"
-                 IsActive="False">
-                    <materialDesign:SnackbarMessage
-                     Content="Hello 2"
-                 ActionContent="UNDO" />
-                </materialDesign:Snackbar>
+            <ComboBox Margin="50 10"
+                      Name="comBox1"
+                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                  materialDesign:HintAssist.Hint="请选择楼层"
+                  ItemsSource="{Binding ShortStringList}"
+                  materialDesign:TextFieldAssist.HasClearButton="True"
+                  Width="256">
+            </ComboBox>
+
+            <ComboBox Margin="20"  
+                      Name="comBox2"
+                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                  materialDesign:HintAssist.Hint="请选择寝室号:"
+                  ItemsSource="{Binding ShortStringList}"
+                  materialDesign:TextFieldAssist.HasClearButton="True"
+                  Width="256">
+            </ComboBox>
+
+            <StackPanel Orientation="Horizontal">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <RadioButton
+                        Name="button_west"
+                        Style="{StaticResource MaterialDesignTabRadioButton}"
+                        Margin="110 0 "
+                        IsChecked="False"
+                        Content="西边"
+                        Grid.Column="0"
+                        Foreground="#2E9AFE"
+                        FontFamily="宋体"
+                        MouseMove="button_west_MouseMove"
+                        MouseLeave="button_west_MouseLeave"
+                        />
+                    <RadioButton
+                        x:Name="button_east"
+                        Style="{StaticResource MaterialDesignTabRadioButton}"
+                        IsChecked="True"
+                        Content="东边"
+                        Grid.Column="1"
+                         Foreground="#2E9AFE"
+                        FontFamily="宋体"
+                        MouseMove="button_east_MouseMove" 
+                        MouseLeave="button_east_MouseLeave"/>
+
+                </Grid>
+               
+            </StackPanel>
+
+            <Grid Margin="0 30">
+                <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        Click="BtnClick"
+                 Width="120"
+                Height="50"
+                Background="#2E9AFE"
+                materialDesign:ButtonAssist.CornerRadius="20"
+                ToolTip="快点我^^">
+                <TextBlock Text="查询电费" FontFamily="宋体" Foreground="#FFFFFF" FontSize="22" />
+                </Button>
             </Grid>
-    </StackPanel>
+
+        </StackPanel>
     </Border>
 </Window>
