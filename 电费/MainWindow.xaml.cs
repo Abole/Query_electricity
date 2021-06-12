@@ -70,11 +70,11 @@ namespace 电费
             
             if (button_west.IsChecked == false&&button_east.IsChecked==true)
             {
-                Posit = "1";
+                Posit = "2";
             }
             else
             {
-                Posit = "2";
+                Posit = "1";
             }
 
             string Url = "http://h5cloud.17wanxiao.com:8080/CloudPayment/user/getRoomState.do?payProId=726&schoolcode=43&businesstype=2&roomverify=-36--" + Lou + "-" + Posit + Lou + Qin;
