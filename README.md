@@ -2,6 +2,7 @@
 #河南工业大学F区寝室电费查询系统
 =========
 目前只做了F区，其他区随缘看心情慢慢加
+要是想要单纯运行只需下载可执行文件
 -----------
 界面图片：<br>
 ![image](https://github.com/Abole/Query_electricity/blob/master/%E7%95%8C%E9%9D%A2.png)<br>
