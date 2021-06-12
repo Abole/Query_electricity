@@ -1,0 +1,5 @@
+D:\code\C#\电费\电费\bin\Debug\net461\win-x64\publish\电费.exe
+D:\code\C#\电费\电费\bin\Debug\net461\win-x64\publish\电费.exe.config
+D:\code\C#\电费\电费\bin\Debug\net461\win-x64\publish\电费.pdb
+D:\code\C#\电费\电费\bin\Debug\net461\win-x64\publish\MaterialDesignColors.dll
+D:\code\C#\电费\电费\bin\Debug\net461\win-x64\publish\MaterialDesignThemes.Wpf.dll
