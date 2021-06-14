@@ -15,8 +15,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}"
-        Icon="D:\code\C#\电费\电费\省电.ico">
+        FontFamily="{DynamicResource MaterialDesignFont}">
     <Border Padding="10">
         <StackPanel>
 
